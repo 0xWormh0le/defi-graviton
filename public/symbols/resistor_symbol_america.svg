@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="20">
+  <path d="M0 10
+    l15 0
+    l2.5 -6
+    l5 14
+    l5 -14
+    l5 14
+    l5 -14
+    l5 14
+    l2.5 -8
+    l15 0"
+        stroke="black" stroke-width="1" stroke-linejoin="bevel" fill="none"></path>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100"
+        height="80">
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="M 70.166665,40 L 95.166663,40"
+    />
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="M 35,22 L 4.999999,22"
+    />
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="M 35,58 L 5,58"
+    />
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="M 34,3.5 L 34,5 L 34,75 L 34,76.5 L 35.5,76.5 C 55.631594,76.5 72,60.131594 72,40 C 72,19.868406 55.631594,3.5 35.5,3.5 L 34,3.5 z M 37,6.65625 C 54.795557,7.4575527 68.5,22.005837 68.5,40 C 68.5,57.994163 54.795557,72.542447 37,73.34375 L 37,6.65625 z"
+    />
+</svg>

@@ -1,0 +1,1 @@
+export const GENESIS_TERMINAL_PART_UID = "835bf3e1-33dd-41bb-a166-c0a31607d645";

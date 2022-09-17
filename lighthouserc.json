@@ -1,0 +1,34 @@
+{
+  "ci": {
+    "collect": {
+      "settings": {
+        "chromeFlags": "--no-sandbox"
+      },
+      "numberOfRuns": 3,
+      "url": [
+        "http://localhost/",
+        "http://localhost/natarius/",
+        "http://localhost/natarius/new-part-template"
+      ]
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "color-contrast": "warning",
+        "meta-viewport": "warning",
+        "meta-description": "warning",
+        "errors-in-console": "warning",
+        "uses-rel-preconnect": "off",
+        "uses-long-cache-ttl": "off",
+        "uses-http2": "off"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "server": {
+    },
+    "wizard": {
+    }
+  }
+}

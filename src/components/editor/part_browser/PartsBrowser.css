@@ -1,0 +1,56 @@
+.partsBrowser {
+    max-width: 276px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.partsBrowserHeader h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+hr {
+    width: 100%;
+}
+
+.searchResultsListContainer {
+    width: 100%;
+    overflow: auto;
+}
+
+.searchResultsList {
+    width: 100%;
+    padding: 0 !important;
+}
+
+.partListItem {
+    height: 110px;
+}
+
+.partListItem .MuiListItemAvatar-root {
+    margin-top: 0 !important;
+}
+
+.partPreview {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.partPreview svg {
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.partBody {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.partBody p {
+    margin-top: 7px;
+}

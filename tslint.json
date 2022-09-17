@@ -1,0 +1,47 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case",
+      "allow-leading-underscore"
+    ],
+    "no-magic-numbers": {
+      "severity": "warning"
+    },
+    "id-blacklist": [
+      "obj",
+      "data",
+      "err",
+      "e",
+      "i",
+      "callback",
+      "pt",
+      "arr"
+    ],
+    "no-empty": [
+      true,
+      "allow-empty-functions"
+    ],
+    "id-length": ["error"],
+    "ban-ts-ignore": {
+      "severity": "warning"
+    },
+    "no-any": {
+      "severity": "warning"
+    },
+    "no-console": [
+      true,
+      "log",
+      "warn"
+    ],
+    "object-literal-sort-keys": false
+  },
+    "rulesDirectory": []
+}

@@ -1,0 +1,1 @@
+export const NEW_PART_TEMPLATE_DOCUMENT_UID = "5304eee2-15ae-0a90-38bf-9b79b15ddf47";

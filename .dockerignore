@@ -1,0 +1,21 @@
+# Git
+.git
+.gitignore
+
+# Build step outputs
+# build
+
+# Docker configuration
+Dockerfile
+Makefile
+docker-compose.yml
+
+# NPM dependencies
+node_modules
+
+# IDE
+.idea
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="80"
+        height="100">
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="m 68,8 0,26"
+    />
+    <circle cx="68" cy="39" r="5" stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"/>
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="m 40,8 0,26"
+    />
+    <circle cx="40" cy="39" r="5" stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"/>
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="m 54,70 0,26"
+    />
+    <circle cx="54" cy="65" r="5" stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"/>
+    <path
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"
+            d="m 57,61 11,-17"
+    />
+    <path
+            d="m 25,8 0,88"
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"/>
+    <path
+            d="M8,2.5 a1,1 0 0,0 5,0"
+            transform="rotate(90)"
+            stroke="white" stroke-width="1" stroke-linejoin="bevel" fill="none"/>
+</svg>

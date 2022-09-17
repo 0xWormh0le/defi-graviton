@@ -1,0 +1,22 @@
+.EditorHtmlRootBody {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.navBarDocumentEditor {
+    width: 300px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+}
+
+.navBarSyncStatus {
+    display: inline;
+}
+
+
+.Mui-error {
+    border: 1px solid red;
+}

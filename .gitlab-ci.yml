@@ -1,0 +1,82 @@
+variables:
+  GIT_STRATEGY: clone
+  AMPLIFY_PREVIEW_URL: deyqdz2kz8jis.amplifyapp.com
+
+stages:
+  - build
+  - test
+  - preview
+  - deploy
+
+install-dependencies:
+  stage: build
+  script:
+    - docker build -t docker-graviton .
+
+jest:
+  stage: test
+  needs: ["install-dependencies"]
+  script:
+    - docker run docker-graviton yarn test
+
+lint:
+  stage: test
+  needs: ["install-dependencies"]
+  script:
+    - docker run docker-graviton yarn lint
+
+lighthouse:
+  stage: test
+  needs: ["install-dependencies"]
+  script:
+    - docker run docker-graviton yarn lhci
+  except:
+    refs:
+      - master
+    
+preview:
+  stage: preview
+  except:
+    refs:
+      - master
+  script:
+    - echo "Build Amplify Preview Url"
+    - curl "$CI_API_V4_URL/projects/$CI_PROJECT_ID/repository/commits/$CI_COMMIT_SHA/merge_requests?private_token=$GITLAB_API_TOKEN"
+    - MERGE_REQUEST_IID=$(curl "$CI_API_V4_URL/projects/$CI_PROJECT_ID/repository/commits/$CI_COMMIT_SHA/merge_requests?private_token=$GITLAB_API_TOKEN" | python -c "import sys,json; print json.load(sys.stdin)[0]['iid']")
+    - echo "MERGE_REQUEST_IID=$MERGE_REQUEST_IID" >> deploy.env
+  artifacts:
+    reports:
+      dotenv: deploy.env
+  environment:
+    name: ${CI_COMMIT_REF_SLUG}
+    url: https://pr-${MERGE_REQUEST_IID}.${AMPLIFY_PREVIEW_URL}
+
+deploy-dev:
+  stage: deploy
+  needs: ["install-dependencies"]
+  only:
+    refs:
+      - master
+  except:
+    changes:
+      - version.txt
+  before_script:
+    - sed -i "1s/^REACT_APP_VERSION.*/REACT_APP_VERSION=$(git rev-parse HEAD)/" .env
+  script:
+    - eb init --region us-west-2 --platform Docker graviton-demo
+    - eb use graviton-dev
+    - eb deploy --timeout 60 -l "dev:$(git rev-parse HEAD)"
+
+deploy-prod:
+  stage: deploy
+  needs: ["install-dependencies"]
+  only:
+    refs:
+      - master
+    changes:
+      - version.txt
+  script:
+    - eb init --region us-west-2 --platform Docker graviton-demo
+    - eb use graviton
+    - eb deploy --timeout 60 -l "$(cat version.txt)"
+

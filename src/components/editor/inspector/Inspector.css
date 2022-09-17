@@ -1,0 +1,24 @@
+.subjectInspector {
+    max-width: 276px !important;
+    min-width: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subjectInspector-body {
+    overflow-y: auto;
+}
+
+.inspectorActionPanel {
+    padding: 10px;
+}
+
+.MuiExpansionPanelDetails-root {
+    padding: 0px 18px 0px 0px !important;
+}
+
+.documentPartSwitch {
+    margin-left: -4px !important;
+    margin-bottom: 4px;
+}

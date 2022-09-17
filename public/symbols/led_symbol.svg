@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="100"
+    height="70"
+>
+    <path
+        stroke="black" stroke-width="1" stroke-linejoin="bevel" fill="none"
+        d="m67,50-32-18v36zm33,0H0m67-18v36M46,25l18-18m7,7-18,18"
+    />
+
+    <path
+        stroke="black" stroke-width="1" stroke-linejoin="bevel" fill="none"
+        d="m57,9 10-5-5,10m2,2 10-5-5,10"
+    />
+</svg>
